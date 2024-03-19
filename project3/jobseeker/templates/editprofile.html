@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* CSS for the container */
+        .container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full height of the viewport */
+        }
+
+        /* CSS for the box */
+        .form-box {
+            width: 400px; /* Adjust width as needed */
+            border: 1px solid #ccc; /* Border color and thickness */
+            padding: 20px; /* Padding inside the box */
+            border-radius: 8px; /* Rounded corners */
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        /* Style for labels */
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Style for input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding and border are included in the width */
+        }
+
+        /* Style for submit button */
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Style for submit button on hover */
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <form method="post">{% csrf_token %}
+            <h1>EDIT PROFILE</h1>
+            <label for="uname">UNAME</label>
+            <input type="text" id="uname" name="uname" value="{{user.uname}}">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" value="{{user.email}}">
+
+            <label for="number">Number</label>
+            <input type="text" id="number" name="number" value="{{user.number}}">
+
+            <label for="date">Date</label>
+            <input type="text" id="date" name="date" value="{{user.date}}">
+
+            <label for="heq">HEQ</label>
+            <input type="text" id="heq" name="heq" value="{{user.heq}}">
+
+            <button type="submit">UPDATE</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

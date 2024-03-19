@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                Job Details
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ user.company_name }}</h5>
+                <p class="card-text">EMAIL: {{ user.email }}</p>
+                <p class="card-text">JOB TITLE: {{ user.job_title }}</p>
+                <p class="card-text">JOB TYPE: {{ user.job_type }}</p>
+                <p class="card-text">EXPERIENCE: {{ user.experience }}</p>
+                <p class="card-text">WORK TYPE: {{ user.work_type }}</p>
+                <a href="/apply/{{ user.id }}/{{ uid }}" class="btn btn-primary">APPLY NOW</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
