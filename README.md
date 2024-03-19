@@ -1,0 +1,1 @@
+JobSeeker," a web app using Python and Django. It connects job seekers with companies by allowing companies to post job openings and job seekers to apply. Job seekers can also view which companies they've applied to and contact them via email. JobSeeker streamlines the job search process and improves communication between job seekers and companies.
